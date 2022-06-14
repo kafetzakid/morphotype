@@ -1,0 +1,33 @@
+Package: morphotype
+Title: Typological (Re)Arrangement For Pottery Based On Form
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Danai",
+           family = "Kafetzaki",
+           role = c("aut", "cre"),
+           email = "danai.kafetzaki@gmail.com",
+           comment = c(ORCID = "0000-0001-7002-5850"))
+Description: The morphotype package provides a pipeline from shape data extraction to typological arrangement of pottery profiles.
+    The process requires as input the 2D technical drawings of the profiles and the height of the rim. 
+    The package allows isolation of the wall profile and includes quantification based on (i) a set of gemometric meaures, (ii) one dimansional profile outline, (iii) two-dimensional profile outline and (iv) the wall profile.
+    It incorporates dissimilarity computation based on distance metrics, combination of different form quantification methods, fuzzy clustering and fuzzy shape desciptors formulation. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+Imports: 
+    stats,
+    ggplot2,
+    reshape2,
+    magick,
+    EBImage,
+    e1071,
+    SimilarityMeasures,
+    factoextra,
+    igraph,
+    MASS
+Suggests: 
+    stad,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

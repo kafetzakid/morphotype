@@ -2,6 +2,7 @@
 # morphotype
 
 <!-- badges: start -->
+[![DOI](https://zenodo.org/badge/485943302.svg)](https://zenodo.org/badge/latestdoi/485943302)
 <!-- badges: end -->
 
 The goal of morphotype is to provide a pipeline from shape data

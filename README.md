@@ -2,6 +2,7 @@
 # morphotype
 
 <!-- badges: start -->
+
 [![DOI](https://zenodo.org/badge/485943302.svg)](https://zenodo.org/badge/latestdoi/485943302)
 <!-- badges: end -->
 
@@ -20,11 +21,14 @@ devtools::install_github("kafetzakid/morphotype")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Below is a basic example which shows you how to solve a common problem.
+Note that ‘?raw=true’ is pasted on the actual filename to access the
+image in github. When you read images locally, use the name of your
+image file including extension, for instance ‘SADR010324.jpg’.
 
 ``` r
 library(morphotype)
-drawing_img = magick::image_read('~/myRpacks/morphotype/inst/extdata/SADR010324.jpg')
+drawing_img = magick::image_read('https://github.com/kafetzakid/morphotype/blob/main/inst/extdata/SADR010324.jpg?raw=true') 
 print(drawing_img)
 #> # A tibble: 1 × 7
 #>   format width height colorspace matte filesize density
@@ -32,8 +36,12 @@ print(drawing_img)
 #> 1 JPEG    1074    467 sRGB       FALSE    28592 300x300
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+<img src="README-example-1.png" width="100%" />
 
 ``` r
-img_data = morphotype::get_input(filename = 'SADR010324.jpg', trim = 10, thr = 0.9, wd = '~/myRpacks/morphotype/inst/extdata')
+img_data = morphotype::get_input(filename = 'SADR010324.jpg?raw=true', trim = 10, thr = 0.9, wd = 'https://github.com/kafetzakid/morphotype/blob/main/inst/extdata')
+str(img_data)
+#> List of 2
+#>  $ matrix     : num [1:1054, 1:447] 0 0 0 0 0 0 0 0 0 0 ...
+#>  $ alternative: NULL
 ```

@@ -6,7 +6,7 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-",
+  fig.path = "README-",
   out.width = "100%"
 )
 ```
@@ -14,6 +14,7 @@ knitr::opts_chunk$set(
 # morphotype
 
 <!-- badges: start -->
+[![DOI](https://zenodo.org/badge/485943302.svg)](https://zenodo.org/badge/latestdoi/485943302)
 <!-- badges: end -->
 
 The goal of morphotype is to provide a pipeline from shape data extraction to typological arrangement of pottery profiles.
@@ -29,14 +30,16 @@ devtools::install_github("kafetzakid/morphotype")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Below is a basic example which shows you how to solve a common problem.
+Note that '?raw=true' is pasted on the actual filename to access the image in github. When you read images locally, use the name of your image file including extension, for instance 'SADR010324.jpg'.
+
 
 ```{r example}
 library(morphotype)
-drawing_img = magick::image_read('~/myRpacks/morphotype/inst/extdata/SADR010324.jpg')
+drawing_img = magick::image_read('https://github.com/kafetzakid/morphotype/blob/main/inst/extdata/SADR010324.jpg?raw=true') 
 print(drawing_img)
-img_data = morphotype::get_input(filename = 'SADR010324.jpg', trim = 10, thr = 0.9, wd = '~/myRpacks/morphotype/inst/extdata')
-
+img_data = morphotype::get_input(filename = 'SADR010324.jpg?raw=true', trim = 10, thr = 0.9, wd = 'https://github.com/kafetzakid/morphotype/blob/main/inst/extdata')
+str(img_data)
 ```
 
 ```{r notes, echo = FALSE}

@@ -1,6 +1,6 @@
 Package: morphotype
 Title: Typological (Re)Arrangement For Pottery Based On Form
-Version: 0.0.0.9000
+Version: 0.1.1
 Authors@R: 
     person(given = "Danai",
            family = "Kafetzaki",

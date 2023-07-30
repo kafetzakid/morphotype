@@ -1,6 +1,6 @@
 Package: morphotype
 Title: Typological (Re)Arrangement For Pottery Based On Form
-Version: 0.1.1
+Version: 0.2.0
 Authors@R: 
     person(given = "Danai",
            family = "Kafetzaki",
@@ -15,7 +15,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
 Imports: 
     stats,
     ggplot2,
@@ -26,6 +26,7 @@ Imports:
     SimilarityMeasures,
     factoextra,
     igraph,
+    graphics,
     MASS
 Suggests: 
     stad,
